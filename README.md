@@ -76,80 +76,73 @@ Create .env file:
 REACT_APP_API_URL=http://localhost:5000
 ```
 
-Running the Application
-Start Backend Server
+4. Running the Application
+- Start Backend Server
 
-bash
-Copy
+```bash
 cd server
 npm run start
-Start Frontend Development Server
+```
+- Start Frontend Development Server
 
-bash
-Copy
+```bash
 cd client
 npm start
-The dashboard will open at http://localhost:3000
+```
+- The dashboard will open at http://localhost:3000
 
-Configuration
-API Endpoints
-Endpoint Method Description
-/api/github?username={username} GET Get GitHub repository data
-/api/youtube?channelId={channelId} GET Get YouTube channel statistics
-Environment Variables
-Server (.env)
+5. Configuration
+- API Endpoints
+- Endpoint Method Description
+- /api/github?username={username} GET Get GitHub repository data
+- /api/youtube?channelId={channelId} GET Get YouTube channel statistics
+- Environment Variables
 
-PORT: Server port (default: 5000)
+6. Server (.env)
+- PORT: Server port (default: 5000)
+- YOUTUBE_API_KEY: YouTube Data API v3 key
 
-YOUTUBE_API_KEY: YouTube Data API v3 key
+7. Client (.env)
+- REACT_APP_API_URL: Backend server URL
 
-Client (.env)
+## Project Structure
 
-REACT_APP_API_URL: Backend server URL
+- analytics-dashboard/
+- ├── client/ # React Frontend
+- │ ├── public/
+- │ ├── src/
+- │ │ ├── components/ # React components
+- │ │ ├── App.tsx # Main component
+- │ │ └── index.tsx # Entry point
+- │ ├── tsconfig.json # TypeScript config
+- │ └── package.json
+- │
+- └── server/ # Express Backend
+- ├── src/
+- │ └── index.ts # Server entry point
+- ├── tsconfig.json # TypeScript config
+- └── package.json
+  
+### Contributing
+- Fork the repository
+- Create your feature branch:
 
-Project Structure
-Copy
-analytics-dashboard/
-├── client/ # React Frontend
-│ ├── public/
-│ ├── src/
-│ │ ├── components/ # React components
-│ │ ├── App.tsx # Main component
-│ │ └── index.tsx # Entry point
-│ ├── tsconfig.json # TypeScript config
-│ └── package.json
-│
-└── server/ # Express Backend
-├── src/
-│ └── index.ts # Server entry point
-├── tsconfig.json # TypeScript config
-└── package.json
-Contributing
-Fork the repository
-
-Create your feature branch:
-
-bash
-Copy
+```bash
 git checkout -b feature/new-feature
-Commit changes:
+```
 
-bash
-Copy
+- Commit changes:
+
+```bash
 git commit -m 'Add some feature'
-Push to the branch:
+```
 
-bash
-Copy
+- Push to the branch:
+
+```bash
 git push origin feature/new-feature
-Open a Pull Request
+```
 
-License
-This project is licensed under the MIT License - see LICENSE file for details.
+- Open a Pull Request
 
-Acknowledgments
-Create React App for project scaffolding
 
-Recharts for data visualization components
-
-Express.js team for backend framework
